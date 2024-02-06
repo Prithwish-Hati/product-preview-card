@@ -1,0 +1,148 @@
+:root {
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(139, 23%, 19%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--primary-cream);
+}
+
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+.body-text {
+  font-size: 14px;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2em;
+}
+
+.article {
+  background-color: white;
+  border-radius: 1em;
+  max-width: 450px;
+}
+
+.mobile-img {
+  display: block;
+  width: 100%;
+  border-radius: 1em 1em 0 0;
+}
+
+.desktop-img {
+  display: none;
+}
+
+.container {
+  margin: 1em 1.5em;
+}
+
+.category {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+  color: var(--dark-grayish-blue);
+}
+
+.product-name {
+  font-family: "Fraunces", serif;
+  font-size: 2.2rem;
+}
+
+.product-desc {
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-grayish-blue);
+  line-height: 170%;
+}
+
+.price-container {
+  position: relative;
+  margin-top: 2em;
+}
+
+.current-price {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--primary-dark-cyan);
+  text-decoration: none;
+}
+
+.original-price {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 0.5em;
+  left: 9em;
+  color: var(--dark-grayish-blue);
+}
+
+.cart-button {
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border: 0;
+  color: white;
+  background-color: var(--primary-dark-cyan);
+  border-radius: 0.5em;
+  padding: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.cart-button:active {
+  background-color: var(--very-dark-blue);
+}
+
+.attribution {
+  margin-top: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--primary-dark-cyan);
+}
+
+@media (min-width: 1024px) {
+  .mobile-img {
+    display: none;
+  }
+
+  #main {
+    padding: 0;
+    /* height: 60vh; */
+  }
+
+  .article {
+    display: flex;
+    max-width: 100vw;
+    align-items: stretch;
+  }
+
+  .desktop-img {
+    display: block;
+    border-radius: 1em 0 0 1em;
+    height: 30em;
+  }
+
+  .container {
+    max-width: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
